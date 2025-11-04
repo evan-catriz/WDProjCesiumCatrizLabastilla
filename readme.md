@@ -29,7 +29,7 @@ Animal Habitats:<br>
 The animal habitats shows the geography of the location and serves as a directory to the endangered species. There will be dots placed on the map, color coded and labeled (with a legend) on the general location of each endangered species, and will give general information when clicked in a small "in-web window." There is a read more button at the bottom of said window, and when clicked, directs to the content/more information on the species when clicked.<br>
 <br>
 Animal Directory:<br>
-The animal directory page is basically all the content or information surrounding aformentioned endangered species clicked from the interactive map. It will display more detailed information, including some pictures of said species and quotes from external sources.<br>
+The animal directory page is asically all the content or information surrounding aformentioned endangered species clicked from the interactive map. It will display more detailed information, including some pictures of said species and quotes from external sources.<br>
 <br>
 Next Steps:<br>
 The next steps page shows organizations which protect and care for endangered species that the user can support and follow. It will also display infographics, posters, etc.<br>
