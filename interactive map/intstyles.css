@@ -1,4 +1,32 @@
-* {
+*{
     font-family: Verdana, Arial, Sans-serif;
     box-sizing: border-box;
+}
+
+.header{
+    text-align: center;
+}
+
+.header > #titles{
+    text-align: center;
+    margin: 200px;
+}
+
+.header .header-pages{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#arrow-l{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+#arrow-r{
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
