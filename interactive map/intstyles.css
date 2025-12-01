@@ -3,6 +3,12 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url("../assets/sky.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 .header{
     text-align: center;
 }
@@ -10,6 +16,11 @@
 .header > #titles{
     text-align: center;
     margin: 200px;
+}
+
+.header #hh3:hover, #adh3:hover, #ahh3:hover, #dmh3:hover, #nsh3:hover, #auh3:hover{
+    transform: scale(1.2);
+    transition: scale 0.3 ease;
 }
 
 .header .header-pages{
