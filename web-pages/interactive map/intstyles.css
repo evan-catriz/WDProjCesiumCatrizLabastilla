@@ -6,30 +6,24 @@
 }
 
 body{
-    background-image: url("../../assets/sky.gif");
+    background-image: url("../../assets/rforest.gif");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.s-nav a:hover{
-    transform: scale(1.1) translateX(8px);
-    transition: transform 0.1s ease-in-out;
-    color: #f1f1f1;
-}
-
 .s-nav{
     height: 100%;
-    width: 150px;
+    width: 160px;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
-    background-color: #a7c957;
-    background: linear-gradient(to left, #a9ca5d, #67964b);
+    background-color: #4a5e3d;
+    background: linear-gradient(to right, #2e3a2c, #4a5e3d);
     overflow-x: hidden;
     padding: 20px;
     font-family: "DM Sans", sans-serif;
-    border-right: 1.5px ridge black;
+    border-right: 4px ridge black;
 }   
 
 .s-nav > #home{
@@ -41,11 +35,17 @@ body{
 }
 
 .s-nav a{
-    font-size: 1.1em;
+    font-size: 1.4em;
     text-decoration: none;
     color: black;
     display: inline-block;
     font-weight:450;
+}
+
+.s-nav a:hover{
+    transform: scale(1.1) translateX(8px);
+    transition: transform 0.1s ease-in-out;
+    color: #f1f1f1;
 }
 
 @media screen and (max-height: 450px) {
@@ -54,20 +54,31 @@ body{
 }
 
 .main {
-  margin-left: 150px;
+  margin-left: 160px;
   padding: 0px 10px;
   text-align: center;
 }
 
+.main > .header{
+
+    text-align: center;
+    margin-bottom: 30px;
+    position: absolute;
+    width: 100%;
+    background-color: green; 
+}
+
 .main h1{
     font-family: "Josefin Sans", sans-serif;
-    margin-top: 50px;
+    font-size: 50px;
+    margin-top: 70px;
 }
 .main h2{
     font-family: "Josefin Sans", sans-serif;    
+    font-size: 30px;
 }
 
 .main #phmap img{
     width:auto;
-    height: 800px;
+    height: 1400px;
 }
