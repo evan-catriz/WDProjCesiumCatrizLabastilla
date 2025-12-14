@@ -6,9 +6,18 @@
 }
 
 body{
-    background-image: url("../../assets/rforest.gif");
+    background-image: url("assets/rainforest-mist.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.header{
+    text-align: center;
+    height: auto;
+    max-width: 500px;
+    margin: auto;
+    font-family: "DM Sans", sans-serif;
+    margin-bottom: 50px;
 }
 
 .s-nav{
@@ -53,38 +62,15 @@ body{
   .sidenav {padding-top: 15px;}
 }
 
-.main {
-  margin-left: 160px;
-  padding: 0px 10px;
-  text-align: center;
-}
-
-.main > .header{
-    height: auto;
-    max-width: 500px;
-    margin: auto;
+.maintext{
+    margin-left: 160px; 
+    z-index: 2;
+    top: 0;
+    left: 0;
     background-color: #4a5e3d;
-    background: linear-gradient(to right, #384636, #536a43);
+    background: linear-gradient(to right, #2c6946, #47835f);
     overflow-x: hidden;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 20px;
     font-family: "DM Sans", sans-serif;
-    border: 4px ridge black;
-    margin-bottom: 50px;
-}
-
-.main h1{
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 50px;
-    margin-top: 70px;
-}
-.main h2{
-    font-family: "Josefin Sans", sans-serif;    
-    font-size: 30px;
-}
-
-.main #phmap img{
-    width:auto;
-    height: 1400px;
+    border: 2px ridge black;
 }
