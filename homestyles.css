@@ -62,8 +62,8 @@ body{
     max-width: 500px;
     margin: auto;
     font-family: "Josefin Sans", sans-serif;
-    margin-bottom: 50px;
     text-align: center;
+    padding: 30px;
 }
 
 .main > .maintext{

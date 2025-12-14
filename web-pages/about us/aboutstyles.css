@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../../assets/pisaybg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s-nav{
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #4a5e3d;
+    background: linear-gradient(to right, #2e3a2c, #4a5e3d);
+    overflow-x: hidden;
+    padding: 20px;
+    font-family: "DM Sans", sans-serif;
+    border-right: 4px ridge black;
+}   
+
+.s-nav > #home{
+    font-weight: bold;
+}
+
+.s-nav > p{
+    visibility: hidden;
+    font-size: 1.4vw;
+}
+
+.s-nav a{
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-weight:450;
+}
+
+.s-nav a:hover{
+    transform: scale(1.1) translateX(8px);
+    transition: transform 0.1s ease-in-out;
+    color: #f1f1f1;
+}
+
+@media screen and (max-height: 350px) {
+  .sidenav {padding-top: 15px;}
+}
+
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+  text-align: center;
+}
+
+.main > .header{
+    height: auto;
+    max-width: 500px;
+    margin: auto;
+    background-color: #4a5e3d;
+    background: linear-gradient(to right, #384636, #536a43);
+    overflow-x: hidden;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "DM Sans", sans-serif;
+    border: 4px ridge black;
+    margin-bottom: 50px;
+}
+
+.main h1{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 50px;
+    margin-top: 70px;
+}
+.main h2{
+    font-family: "Josefin Sans", sans-serif;    
+    font-size: 30px;
+}
+
+#arrow-l{
+    font-size: 40px;
+    position: absolute;
+    left: 170px;
+    text-decoration: none;
+    color: black;
+}
+
+#arrow-r{
+    font-size: 40px;
+    position: absolute;
+    right: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#arrow-l:hover, #arrow-r:hover{
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+    color: #f1f1f1;
+}
+
+.main > h3{
+    font-size: 30px;
+}
+
+.main > .himig > #himg{
+    width: auto;
+    height: 350px;
+    float: left;
+    border: 4px ridge;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.main > .himig > p{
+    text-align: left;
+    max-width: 600px;
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: -90px;
+}
