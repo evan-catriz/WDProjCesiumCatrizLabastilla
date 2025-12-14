@@ -88,3 +88,25 @@ body{
     width:auto;
     height: 1400px;
 }
+
+#arrow-l{
+    font-size: 40px;
+    position: absolute;
+    left: 170px;
+    text-decoration: none;
+    color: black;
+}
+
+#arrow-r{
+    font-size: 40px;
+    position: absolute;
+    right: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#arrow-l:hover, #arrow-r:hover{
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+    color: #f1f1f1;
+}
