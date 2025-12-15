@@ -108,6 +108,8 @@ body{
 
 .main > h3{
     font-size: 30px;
+    font-family: "DM Sans", sans-serif;
+    text-align: center;
 }
 
 .main > .himig > #himg{
@@ -125,5 +127,50 @@ body{
     font-size: 20px;
     display: inline-block;
     margin-top: 20px;
+    margin-bottom: 100px;
     margin-left: -90px;
+    background-color: #4a5e3d;
+    background: linear-gradient(to right, #384636, #536a43);
+    overflow-x: hidden;
+    padding: 20px;
+    font-family: "DM Sans", sans-serif;
+    border: 4px ridge black;
+}
+
+.main > .evan > #eimg{
+    width: auto;
+    height: 300px;
+    float: left;
+    border: 4px ridge;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.main > .evan > p{
+    text-align: left;
+    max-width: 600px;
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 45px;
+    margin-left: -90px;
+    background-color: #4a5e3d;
+    background: linear-gradient(to right, #384636, #536a43);
+    overflow-x: hidden;
+    padding: 20px;
+    font-family: "DM Sans", sans-serif;
+    border: 4px ridge black;
+}
+
+.main > .other-text > p{
+    text-align: left;
+    max-width: 600px;
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 45px;
+    background-color: #4a5e3d;
+    background: linear-gradient(to right, #384636, #536a43);
+    overflow-x: hidden;
+    padding: 20px;
+    font-family: "DM Sans", sans-serif;
+    border: 4px ridge black;
 }
