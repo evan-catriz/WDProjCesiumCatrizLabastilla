@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../../assets/rainforest.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s-nav{
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #4a5e3d;
+    background: linear-gradient(to right, #2e3a2c, #4a5e3d);
+    overflow-x: hidden;
+    padding: 20px;
+    font-family: "DM Sans", sans-serif;
+    border-right: 4px ridge black;
+}   
+
+.s-nav > #home{
+    font-weight: bold;
+}
+
+.s-nav > p{
+    visibility: hidden;
+    font-size: 1.4vw;
+}
+
+.s-nav a{
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-weight:450;
+}
+
+.s-nav a:hover{
+    transform: scale(1.1) translateX(8px);
+    transition: transform 0.1s ease-in-out;
+    color: #f1f1f1;
+}
+
+@media screen and (max-height: 350px) {
+  .sidenav {padding-top: 15px;}
+}
+
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+  text-align: center;
+}
+
+.main > .header{
+    height: auto;
+    max-width: 600px;
+    margin: auto;
+    background-color: #4a5e3d;
+    background: linear-gradient(to right, #384636, #536a43);
+    overflow-x: hidden;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    border: 4px ridge black;
+    margin-bottom: 50px;
+}
+
+.main h1{
+    font-size: 50px;
+    margin-top: 70px;
+}
+.main h2{ 
+    font-size: 30px;
+}
+
+#arrow-l{
+    font-size: 40px;
+    position: absolute;
+    left: 190px;
+    text-decoration: none;
+    color: black;
+}
+
+#arrow-r{
+    font-size: 40px;
+    position: absolute;
+    right: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+#arrow-l:hover, #arrow-r:hover{
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+    color: #f1f1f1;
+}
+
+.main > .orgs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 30px 40px; /* row-gap column-gap */
+  align-items: start; /* align items to the top so rows line up */
+  justify-items: center;
+  padding: 0 20px;
+}
+
+.main > .orgs > h3{
+    height: auto;
+    max-width: 400px;
+    margin: auto;
+    background-color: #4a5e3d;
+    background: linear-gradient(to right, #384636, #536a43);
+    overflow-x: hidden;
+    padding: 10px;
+    font-family: "DM Sans", sans-serif;
+    border: 4px ridge black;
+    font-size: 1.3em;
+}
+
+.main > .orgs > .fst5,
+.main > .orgs > .snd5 {
+  float: none; /* cancel previous floats */
+  width: 100%;
+  max-width: 480px;
+  margin: 0; /* grid controls spacing */
+}
+
+.main > .orgs > .fst5 > p,
+.main > .orgs > .snd5 > p {
+  margin: 30px;
+  padding: 10px; /* keep your visual padding */
+  background-color: #4a5e3d;
+    background: linear-gradient(to right, #384636, #536a43);
+    font-family: "DM Sans", sans-serif;
+    border: 4px ridge black;
+}
+
+.main > .orgs > .fst5 > p:hover,
+.main > .orgs > .snd5 > p:hover {
+  transform: scale(1.05);
+  transition: transform 0.1s ease-in-out;
+}
+
+@media (max-width: 900px) {
+  .main > .orgs {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.main > .message {
+  clear: both;      /* ensures it sits below floated elements if any remain */
+  margin-top: 0;    /* remove extra margin pushing it down */
+  padding-top: 0;
+  
+}
+
+/* tighten the h3 margins so there's no unexpected top space */
+.main > .message > h3 {
+  margin: 0 auto 18px; /* 0 top, center horizontally, small bottom gap */
+  padding: 10px;
+  max-width: 450px;
+  background-color: #4a5e3d;
+    background: linear-gradient(to right, #384636, #536a43);
+    font-family: "DM Sans", sans-serif;
+    border: 4px ridge black;
+}
+
+.main > .logo-carousel > h3{
+    height: auto;
+    max-width: 450px;
+    margin: auto;
+    background-color: #4a5e3d;
+    background: linear-gradient(to right, #384636, #536a43);
+    overflow-x: hidden;
+    padding: 10px;
+    font-family: "DM Sans", sans-serif;
+    border: 4px ridge black;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.main > .message > p{
+    height: auto;
+    max-width: 540px;
+    margin: auto;
+    background-color: #4a5e3d;
+    background: linear-gradient(to right, #384636, #536a43);
+    overflow-x: hidden;
+    padding: 10px;
+    font-family: "DM Sans", sans-serif;
+    border: 4px ridge black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.carousel-container {
+  overflow: hidden; 
+  width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  width: fit-content; 
+  animation: scroll 128s linear infinite; /* Adjust duration (20s) for desired speed */
+}
+
+.slide {
+  width:300px;
+  margin: 0 10px;
+  outline-offset: 0;
+  flex-shrink: 0; 
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(-3000px); /* End position: move left by the width of the original slides */
+  }
+}
