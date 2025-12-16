@@ -36,7 +36,7 @@ body{
 }
 
 .s-nav a{
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     text-decoration: none;
     color: black;
     display: inline-block;
@@ -59,7 +59,7 @@ body{
 
 @keyframes slideInTop {
   0% {
-    transform: translateY(-1000px);
+    transform: translateY(-500px);
   }
   100% {
     transform: translateY(0);
@@ -82,7 +82,7 @@ body{
     font-family: "Josefin Sans", sans-serif;
     text-align: center;
     padding: 30px;
-    animation: slideInTop 1.5s ease-out 0s 1 forwards;
+    animation: slideInTop 1s ease-out 0s 1 forwards;
 }
 
 .main > .maintext{
@@ -94,7 +94,7 @@ body{
     font-family: "DM Sans", sans-serif;
     border: 2px ridge black;
     margin: 20px;
-    animation: slideInBottom 1.5s ease-out 0s 1 forwards;
+    animation: slideInBottom 1s ease-out 0s 1 forwards;
 }
 
 #arrow-l{
