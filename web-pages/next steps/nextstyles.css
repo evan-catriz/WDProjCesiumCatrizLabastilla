@@ -114,7 +114,7 @@ body{
 }
 
 .main > .orgs > h3{
-    height: auto;
+   height: auto;
     max-width: 400px;
     margin: auto;
     background-color: #4a5e3d;
@@ -124,6 +124,7 @@ body{
     font-family: "DM Sans", sans-serif;
     border: 4px ridge black;
     font-size: 1.3em;
+    grid-column: span 2;
 }
 
 .main > .orgs > .fst5,
