@@ -231,3 +231,25 @@ body{
     transform: translateX(-3000px); /* End position: move left by the width of the original slides */
   }
 }
+
+.footer{
+  background-color: #4a5e3d;
+    background: linear-gradient(to right, #384636, #536a43);
+    overflow-x: hidden;
+    padding: 7px;
+    font-family: "DM Sans", sans-serif;
+    border: 4px ridge black;
+    margin-top: 50px;
+}
+
+.main > .footer > a{
+  font-size: 10px;
+  color: black;
+  font-weight:450;
+}
+
+.footer a:hover{
+    transform: scale(1.1) translateX(5px);
+    transition: transform 0.1s ease-in-out;
+    color: #f1f1f1;
+}
