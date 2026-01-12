@@ -37,21 +37,48 @@ The next steps page shows organizations which protect and care for endangered sp
 Digital Museum:<br>
 The digital museum page contains a visual representation (via photos) of each endangered species (seperated) in a carousel like process.
 
+## Design and Narrative on HTML Form
+
+HTML form to be used on the website: Quiz game. The webpage will allow the user to test their knowledge regarding the contents of the website by having them take an online quiz regarding all that was mentioned in the previous webpages. It will first ask for the user’s name in order to keep track of the leaderboard, then 10 questions regarding endangered animals will be asked of the user. A different set of questions will be asked every time the webpage is reloaded. <br><br>
+
+Users will then be redirected to a “Thank you” page showing their score and their place on the leaderboard compared to other people who played the game. This will be accompanied by a fun fact about endangered animals that will change every time the quiz will be taken. This is to allow people to participate more actively in the goals of environmental campaigns by creating a fun and interactive way for people to gain knowledge and spread awareness. <br><br>
+
+An additional webpage will also appear only when the user fills out the form in the first webpage, showing a timeline of environmental conservation efforts, interactive statistics/charts, and additional information on all the organizations displayed in the “Next Steps” webpage. All webpages will incorporate the use of input tag, select tag, option tag, and button tag.<br><br>
+
+### Test Your Knowledge
+This webpage will display an interactive quiz featuring true/false, multiple choice, and identification questions regarding the endangered animals showcased in the website. They will first be asked to input their name, after which they will be given a random set of questions out of 40 questions that will be made. They may take the quiz as many times as they want.
+
+### Score
+This will display the user’s score in the quiz, their place on the leaderboard, and a randomly generated endangered animal fact. It will also show the user what new features they’ve unlocked based on their score in the quiz. A score of 2 will unlock one part of the environmental conservation timeline, a score of 4 will unlock a part of the timeline and one interactive chart, and so on.
+
+### Extra Privileges
+This webpage will only unlock once the user has filled out the quiz at least once, and it contains extra information regarding endangered animals, such as a timeline of environmental conservation efforts around the world, multiple links to animated charts that the user can search up at any time, and a detailed explanation of the environmental awareness organizations. 
+
+
 ## Wireframes
 ### Home Page
-![home page](./assets/homepage.jpg)
+![home page](./readme%20assets//homepage.jpg)
 
 ### Animal Directory
-![info dump](./assets/animaldirectory.jpg)
+![info dump](./readme%20assets/animaldirectory.jpg)
 
 ### Next Steps
-![orgs](./assets/nextsteps.jpg)
+![orgs](./readme%20assets/nextsteps.jpg)
 
 ### Digital Museum
-![gallery](./assets/digitalmuseum.jpg)
+![gallery](./readme%20assets/digitalmuseum.jpg)
 
 ### Animal Habitats
-![map](./assets/interactivemap.jpg)
+![map](./readme%20assets/interactivemap.jpg)
 
 ### About Us
-![about us](./assets/aboutus.jpg)
+![about us](./readme%20assets/aboutus.jpg)
+
+### Quiz Yourself! 
+![quiz yourself](./readme%20assets/quizquestion.png)
+
+### Quiz Score
+![quiz score](./readme%20assets/quizscore.png)
+
+### Log In / Sign Up
+![account](./readme%20assets/account.png)
