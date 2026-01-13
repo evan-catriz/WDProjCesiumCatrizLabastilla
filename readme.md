@@ -75,10 +75,16 @@ This webpage will only unlock once the user has filled out the quiz at least onc
 ![about us](./readme%20assets/aboutus.jpg)
 
 ### Quiz Yourself! 
-![quiz yourself](./readme%20assets/quizquestion.png)
+![quiz form](./readme%20assets/quizform.png)
 
 ### Quiz Score
 ![quiz score](./readme%20assets/quizscore.png)
 
-### Log In / Sign Up
-![account](./readme%20assets/account.png)
+### Register Account
+![register](./readme%20assets/register.png)
+
+### Log In
+![login](./readme%20assets/login.png)
+
+### Extra Privileges!
+![reward](./readme%20assets/extrainfo.png)
