@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registered Accounts</title>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Registered Accounts</h2>
+
+  <p><strong>Student ID:</strong> <span id="student_id"></span></p>
+  <p><strong>Full Name:</strong> <span id="full_name"></span></p>
+</div>
+
+<script>
+  document.getElementById("uname").textContent = localStorage.getItem("uname");
+  document.getElementById("upass").textContent = localStorage.getItem("upass");
+</script>
+
+</body>
+</html>
