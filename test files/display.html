@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Display Page</title>
+</head>
+<body>
+    <h2>Submitted Information</h2>
+    <p><strong>Name:</strong> <span id="displayName"></span></p>
+    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+
+    <script>
+        // Retrieve from localStorage
+        const name = localStorage.getItem("formName");
+        const email = localStorage.getItem("formEmail");
+
+        // Display values
+        document.getElementById("displayName").textContent = name || "No name provided";
+        document.getElementById("displayEmail").textContent = email || "No email provided";
+    </script>
+</body>
+</html>

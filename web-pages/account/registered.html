@@ -6,18 +6,17 @@
 </head>
 
 <body>
+  <h2>Submitted Information</h2>
+  <p><strong>Name:</strong> <span id="uname-disp"></span></p>
+  <p><strong>Password:</strong> <span id="upass-disp"></span></p>
 
-<div class="container">
-  <h2>Registered Accounts</h2>
-
-  <p><strong>Student ID:</strong> <span id="uname"></span></p>
-  <p><strong>Full Name:</strong> <span id="upass"></span></p>
-</div>
-
-<script>
-  document.getElementById("uname").textContent = localStorage.getItem("uname");
-  document.getElementById("upass").textContent = localStorage.getItem("upass");
-</script>
+  <script>
+      const uname = localStorage.getItem("usname");
+      const upass = localStorage.getItem("uspass");
+      
+      document.getElementById("uname-disp").textContent = uname;
+      document.getElementById("upass-disp").textContent = upass;
+  </script>
 
 </body>
 </html>
