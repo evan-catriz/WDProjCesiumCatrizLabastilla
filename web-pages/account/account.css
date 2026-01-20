@@ -122,7 +122,7 @@ body{
     box-shadow: 3px 3px 5px rgba(0,0,0,50%);
     }
 
-fieldset{
+.credentials, .other-buttons{
     margin: 30px;
     background-color: #4a5e3d;
     background: linear-gradient(to right, #384636, #536a43); 
@@ -131,7 +131,11 @@ fieldset{
     border-radius: 10px;
 }
 
-fieldset:nth-child(2) {
+.other-buttons{
+    padding: 20px;
+}
+
+.credentials:nth-child(2) {
     margin-top: 20px;
     }
 
@@ -145,6 +149,11 @@ legend {
 label {
     margin: 5%;
     }
+
+a{
+    color:black;
+    text-decoration: none;
+}
 
 #saccid {
     font-size: 1.2vw;
