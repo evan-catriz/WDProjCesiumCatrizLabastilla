@@ -1,5 +1,9 @@
+/*DM Sans*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/*Josefin Sans*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+/*Anton*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 *{
     box-sizing: border-box;
@@ -11,110 +15,143 @@ body{
     background-size: cover;
 }
 
-.s-nav{
-    height: 100%;
-    width: 160px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.s-nav {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    background-color: #326d6c;
     position: fixed;
-    z-index: 2;
     top: 0;
-    left: 0;
-    background-color: #4a5e3d;
-    background: linear-gradient(to right, #215136, #3f7856);
-    overflow-x: hidden;
-    padding: 20px;
-    font-family: "DM Sans", sans-serif;
-    border-right: 4px ridge black;
-}   
-
-.s-nav > #home{
-    font-weight: bold;
+    width: 100%;
+    height: 4.5rem;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.7);
 }
 
-.s-nav > p{
-    visibility: hidden;
-    font-size: 1.4vw;
-}
-
-.s-nav a{
-    font-size: 1.2vw;
+.s-nav a {
+    color: white;
+    padding: 0 20px;
     text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'DM Sans', Helvetica, sans-serif;
+    font-size: 95%;
+}
+
+.s-nav #home{
+    margin-left: 30px;
+}
+
+.s-nav #tbar{
+    font-family: 'Anton', Helvetica, sans-serif;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    margin-left: 1.5rem;
+}
+
+.s-nav a:hover {
+    background-color: #4CAF50;
     color: black;
-    display: inline-block;
-    font-weight:450;
 }
 
-.s-nav a:hover{
-    transform: scale(1.1) translateX(8px);
-    transition: transform 0.1s ease-in-out;
-    color: #f1f1f1;
-}
+ @media screen and (max-width: 600px) {
+    .s-nav a:not(:first-child) {
+        display: none;
+    }
 
-@media screen and (max-height: 350px) {
-  .sidenav {padding-top: 15px;}
+    .s-nav.responsive {
+        position: relative;
+    }
+
+    .s-nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
 
 .main{
-    margin-left: 160px; 
+    margin-top: 4.5rem;
 }
 
-@keyframes slideInTop {
-  0% {
-    transform: translateY(-500px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInBottom {
-  0% {
-    transform: translateY(1000px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.main > .header{
-    height: auto;
-    max-width: 500px;
-    margin: auto;
-    font-family: "Josefin Sans", sans-serif;
+.main .header h1{
+    margin-top: 230px;
+    font-size: 4.5rem;
     text-align: center;
-    padding: 30px;
-    animation: slideInTop 1s ease-out 0s 1 forwards;
+    font-family: 'Josefin Sans', Helvetica, sans-serif;
 }
 
-.main > .maintext{
-    left: 0;
-    background-color: #4a5e3d;
-    background: linear-gradient(to right, #2d6847, #47835f);
-    overflow-x: hidden;
-    padding: 20px;
-    font-family: "DM Sans", sans-serif;
-    border: 2px ridge black;
-    margin: 20px;
-    animation: slideInBottom 1s ease-out 0s 1 forwards;
+.main .header h2{
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Josefin Sans', Helvetica, sans-serif;
+    margin-bottom: 50px;
 }
 
-#arrow-l{
-    font-size: 40px;
-    position: absolute;
-    left: 170px;
-    text-decoration: none;
-    color: black;
+.main .cont1{
+    margin: 170px;
+    background-color: #306362;
+    background: linear-gradient(to right, rgba(53, 112, 111, 0.7), rgba(54, 132, 130, 0.7)); 
+    box-shadow: 3px 3px 5px rgba(0,0,0,40%);    
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'DM Sans', Helvetica, sans-serif;
 }
 
-#arrow-r{
-    font-size: 40px;
-    position: absolute;
-    right: 10px;
-    text-decoration: none;
-    color: black;
+#waes, #loer, #wbd{
+    font-size: 2.2rem;
 }
 
-#arrow-l:hover, #arrow-r:hover{
-    transform: scale(1.1);
-    transition: transform 0.1s ease-in-out;
-    color: #5db78d;
+.cont1 #waes-info{
+    font-size: 1.3rem;
+}
+
+.cont2, .cont3, .cont4, .cont5{
+    margin: 170px;
+    background-color: #306362;
+    background: linear-gradient(to right, rgba(53, 112, 111, 0.7), rgba(54, 132, 130, 0.7)); 
+    box-shadow: 3px 3px 5px rgba(0,0,0,40%);    
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'DM Sans', Helvetica, sans-serif;
+    font-size: 1.3rem;
+    margin-top: -100px;
+}
+
+.cont3, .cont5{
+    margin-top: 110px;
+}
+
+.cont4 img{
+    height: auto;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5)
+}
+
+.cont4 img:hover{
+    transform: scale(1.1) translateX(1.5rem);
+    transition: transform 0.3s ease-in-out;
+}
+
+#intext{
+    font-size: 13px;
+}
+
+#intext a{
+    color:black;
+}
+
+#intext a:hover{
+    color: white;
 }
