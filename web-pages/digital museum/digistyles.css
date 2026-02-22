@@ -1,5 +1,9 @@
+/*DM Sans*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/*Josefin Sans*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+/*Anton*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 *{
     box-sizing: border-box;
@@ -11,136 +15,156 @@ body{
     background-size: cover;
 }
 
-.s-nav{
-    height: 100%;
-    width: 160px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.s-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #326d6c;
     position: fixed;
-    z-index: 2;
     top: 0;
-    left: 0;
-    background-color: #4a5e3d;
-    background: linear-gradient(to right, #2e3a2c, #4a5e3d);
-    overflow-x: hidden;
-    padding: 20px;
-    font-family: "DM Sans", sans-serif;
-    border-right: 4px ridge black;
-}   
-
-.s-nav > #home{
-    font-weight: bold;
+    width: 100%;
+    height: 4.5rem;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.6);
+    z-index: 5; 
 }
 
-.s-nav > p{
-    visibility: hidden;
-    font-size: 1.4vw;
-}
-
-.s-nav a{
-    font-size: 1.2vw;
+.s-nav a {
+    color: white;
+    padding: 0 20px;
     text-decoration: none;
-    color: black;
-    display: inline-block;
-    font-weight:450;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'DM Sans', Helvetica, sans-serif;
+    font-size: 95%;
 }
 
-.s-nav a:hover{
-    transform: scale(1.1) translateX(8px);
-    transition: transform 0.1s ease-in-out;
-    color: #f1f1f1;
+.s-nav #home{
+    margin-left: 30px;
 }
 
-@media screen and (max-height: 350px) {
-  .sidenav {padding-top: 15px;}
+.s-nav #tbar{
+    font-family: 'Anton', Helvetica, sans-serif;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    margin-left: 1.5rem;
 }
 
-.main {
-  margin-left: 160px;
-  padding: 0px 10px;
-  text-align: center;
-}
-
-.main h1{
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 50px;
-    margin-top: 70px;
-}
-.main h2{
-    font-family: "Josefin Sans", sans-serif;    
-    font-size: 30px;
-}
-
-#arrow-l{
-    font-size: 40px;
-    position: absolute;
-    left: 170px;
-    top: -2px;
-    text-decoration: none;
+.s-nav a:hover {
+    background-color: #4CAF50;
     color: black;
 }
 
-#arrow-r{
-    font-size: 40px;
-    position: absolute;
-    right: 10px;
-    top:-2px;
-    text-decoration: none;
-    color: black;
+@media screen and (max-width: 72rem) {
+  .s-nav #tbar, .snav a {
+    font-size :90%;
+    margin: auto;
+    text-align: left;
+    margin-left: 15px;
+  }
 }
 
-#arrow-l:hover, #arrow-r:hover{
-    transform: scale(1.1);
-    transition: transform 0.1s ease-in-out;
-    color: #529f7b;
+.main{
+    margin-top: 4.5rem;
+}
+
+.main .header h1{
+    margin-top: 200px;
+    font-size: 4.5rem;
+    text-align: center;
+    font-family: 'Josefin Sans', Helvetica, sans-serif;
+}
+
+.main .header h2{
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Josefin Sans', Helvetica, sans-serif;
+    margin-bottom: 50px;
 }
 
 /* CAROUSEL CODE */
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 500px;
   position: relative;
-  margin: auto;
+  width: 1000px;
+  height: 32rem;
+  margin: 6rem auto 2rem auto; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;   
 }
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
-  border: 4px ridge;
+  position: absolute;
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: scale(0.8);
+  border-radius: 2rem;
+  overflow: hidden;       
 }
 
-img{
-    width: 60rem;
-    height: 30rem;
+.mySlides img {
+  width: 600px;
+  height: 30rem;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit; /* inherits 2rem */
+}
+
+.mySlides.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 3;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.mySlides.prevSlide {
+  opacity: 0.65;  
+  transform: translateX(-450px) scale(0.85);  
+  z-index: 2;
+}
+
+.mySlides.nextSlide {
+  opacity: 0.65;
+  transform: translateX(450px) scale(0.85);   
+  z-index: 2;
+}
+
+.mySlides.prevSlide img,
+.mySlides.nextSlide img {
+  filter: blur(1px);
 }
 
 /* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  transform: translateY(-50%);
+  font-size: 32px;
   color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  padding: 16px;
+  cursor: pointer;
+  z-index: 100;   /* bring forward */
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
 }
 
-.prev{
-    left: 0;
-    border-radius: 3px 0 0 3px;
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
@@ -167,11 +191,16 @@ img{
   top: 0;
 }
 
+.dots-container {
+  text-align: center;
+  margin-top: -10px;   
+}
+
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 5px;
-  width: 5px;
+  height: 0.5rem;
+  width: 0.5rem;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -186,7 +215,7 @@ img{
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 0.5s;
 }
 
 @keyframes fade {
@@ -194,24 +223,20 @@ img{
   to {opacity: 1}
 }
 
-.footer{
-  background-color: #4a5e3d;
-    background: linear-gradient(to right, #384636, #536a43);
-    overflow-x: hidden;
-    padding: 7px;
-    font-family: "DM Sans", sans-serif;
-    border: 4px ridge black;
-    margin-top: 50px;
+.wrapper {
+  min-height: 100%;
+  position: relative;
 }
 
-.main > .footer > a{
-  font-size: 10px;
-  color: black;
-  font-weight:450;
-}
-
-.footer a:hover{
-    transform: scale(1.1) translateX(5px);
-    transition: transform 0.1s ease-in-out;
-    color: #f1f1f1;
+.footer {
+  margin-top: 3rem;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -3px 5px rgba(0,0,0,0.6);
+  background-color: #306362;
+  background: linear-gradient(to right, rgba(53, 112, 111, 0.7), rgba(54, 132, 130, 0.7));
+  padding: 15px;
+  font-family: 'DM Sans', Helvetica, sans-serif;
+  font-size: 80%;
 }

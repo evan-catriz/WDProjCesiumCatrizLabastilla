@@ -1,28 +1,32 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+const slides = document.querySelectorAll(".mySlides");
+const dots = document.querySelectorAll(".dot");
 
-// Next/previous controls
+function updateSlides() {
+  slides.forEach(slide => {
+    slide.classList.remove("active", "prevSlide", "nextSlide");
+  });
+
+  dots.forEach(dot => dot.classList.remove("active"));
+
+  slides[slideIndex].classList.add("active");
+  dots[slideIndex].classList.add("active");
+
+  let prevIndex = (slideIndex - 1 + slides.length) % slides.length;
+  let nextIndex = (slideIndex + 1) % slides.length;
+
+  slides[prevIndex].classList.add("prevSlide");
+  slides[nextIndex].classList.add("nextSlide");
+}
+
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  slideIndex = (slideIndex + n + slides.length) % slides.length;
+  updateSlides();
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  slideIndex = n - 1;   // because dots are 1-based
+  updateSlides();
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+updateSlides();

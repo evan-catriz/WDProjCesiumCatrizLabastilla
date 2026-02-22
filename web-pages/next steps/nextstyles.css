@@ -1,5 +1,9 @@
+/*DM Sans*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/*Josefin Sans*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+/*Anton*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 *{
     box-sizing: border-box;
@@ -11,97 +15,76 @@ body{
     background-size: cover;
 }
 
-.s-nav{
-    height: 100%;
-    width: 160px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.s-nav {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    background-color: #326d6c;
     position: fixed;
-    z-index: 2;
     top: 0;
-    left: 0;
-    background-color: #4a5e3d;
-    background: linear-gradient(to right, #384636, #536a43);
-    overflow-x: hidden;
-    padding: 20px;
-    font-family: "DM Sans", sans-serif;
-    border-right: 4px ridge black;
-}   
-
-.s-nav > #home{
-    font-weight: bold;
+    width: 100%;
+    height: 4.5rem;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.6);
 }
 
-.s-nav > p{
-    visibility: hidden;
-    font-size: 1.4vw;
-}
-
-.s-nav a{
-    font-size: 1.2vw;
+.s-nav a {
+    color: white;
+    padding: 0 20px;
     text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'DM Sans', Helvetica, sans-serif;
+    font-size: 95%;
+}
+
+.s-nav #home{
+    margin-left: 30px;
+}
+
+.s-nav #tbar{
+    font-family: 'Anton', Helvetica, sans-serif;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    margin-left: 1.5rem;
+}
+
+.s-nav a:hover {
+    background-color: #4CAF50;
     color: black;
-    display: inline-block;
-    font-weight:450;
 }
 
-.s-nav a:hover{
-    transform: scale(1.1) translateX(8px);
-    transition: transform 0.1s ease-in-out;
-    color: #f1f1f1;
-}
-
-@media screen and (max-height: 350px) {
-  .sidenav {padding-top: 15px;}
-}
-
-.main {
-  margin-left: 160px;
-  padding: 0px 10px;
-  text-align: center;
-}
-
-.main > .header{
-    height: auto;
-    max-width: 600px;
+@media screen and (max-width: 72rem) {
+  .s-nav #tbar, .snav a {
+    font-size :90%;
     margin: auto;
-    background-color: #4a5e3d;
-    background: linear-gradient(to right, #384636, #536a43);
-    overflow-x: hidden;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-family: "Josefin Sans", sans-serif;
-    border: 4px ridge black;
+    text-align: left;
+    margin-left: 15px;
+  }
+}
+
+.main{
+    margin-top: 4.5rem;
+}
+
+.main .header h1{
+    margin-top: 230px;
+    font-size: 4.5rem;
+    text-align: center;
+    font-family: 'Josefin Sans', Helvetica, sans-serif;
+}
+
+.main .header h2{
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Josefin Sans', Helvetica, sans-serif;
     margin-bottom: 50px;
-}
-
-.main h1{
-    font-size: 50px;
-    margin-top: 70px;
-}
-.main h2{ 
-    font-size: 30px;
-}
-
-#arrow-l{
-    font-size: 40px;
-    position: absolute;
-    left: 190px;
-    text-decoration: none;
-    color: black;
-}
-
-#arrow-r{
-    font-size: 40px;
-    position: absolute;
-    right: 30px;
-    text-decoration: none;
-    color: black;
-}
-
-#arrow-l:hover, #arrow-r:hover{
-    transform: scale(1.1);
-    transition: transform 0.1s ease-in-out;
-    color: #5db78d;
 }
 
 .main > .orgs {
@@ -113,42 +96,40 @@ body{
   padding: 0 20px;
 }
 
-.main > .orgs > h3{
-   height: auto;
-    max-width: 400px;
-    margin: auto;
-    background-color: #4a5e3d;
-    background: linear-gradient(to right, #384636, #536a43);
-    overflow-x: hidden;
-    padding: 10px;
-    font-family: "DM Sans", sans-serif;
-    border: 4px ridge black;
-    font-size: 1.3em;
+.orgs > h3{
+   font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Josefin Sans', Helvetica, sans-serif;
     grid-column: span 2;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
 }
 
-.main > .orgs > .fst5,
-.main > .orgs > .snd5 {
+.orgs > .fst5,
+.orgs > .snd5 {
   float: none; /* cancel previous floats */
   width: 100%;
-  max-width: 480px;
-  margin: 0; /* grid controls spacing */
+  max-width: 30rem;
+  margin: 0;
 }
 
-.main > .orgs > .fst5 > p,
-.main > .orgs > .snd5 > p {
-  margin: 30px;
-  padding: 10px; /* keep your visual padding */
-  background-color: #4a5e3d;
-  background: linear-gradient(to right, #384636, #536a43);
-    font-family: "DM Sans", sans-serif;
-    border: 4px ridge black;
+.orgs > .fst5 > p,
+.orgs > .snd5 > p {
+  margin: 2rem;
+  background-color: #306362;
+  background: linear-gradient(to right, rgba(53, 112, 111, 0.7), rgba(54, 132, 130, 0.7)); 
+  box-shadow: 3px 3px 5px rgba(0,0,0,40%);    
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'DM Sans', Helvetica, sans-serif;
+  font-size: 1.3rem;
+  max-width: 30rem;
 }
 
-.main > .orgs > .fst5 > p:hover,
-.main > .orgs > .snd5 > p:hover {
-  transform: scale(1.05);
-  transition: transform 0.1s ease-in-out;
+.orgs b{
+  font-size: 1.7rem;
 }
 
 @media (max-width: 900px) {
@@ -158,98 +139,106 @@ body{
   }
 }
 
-.main > .message {
+.message {
   clear: both;      /* ensures it sits below floated elements if any remain */
   margin-top: 0;    /* remove extra margin pushing it down */
   padding-top: 0;
   
 }
 
-/* tighten the h3 margins so there's no unexpected top space */
-.main > .message > h3 {
-  margin: 0 auto 18px; /* 0 top, center horizontally, small bottom gap */
-  padding: 10px;
-  max-width: 450px;
-  background-color: #4a5e3d;
-  background: linear-gradient(to right, #384636, #536a43);
-    font-family: "DM Sans", sans-serif;
-    border: 4px ridge black;
+.message{
+    margin: 100px;
+    background-color: #306362;
+    background: linear-gradient(to right, rgba(53, 112, 111, 0.7), rgba(54, 132, 130, 0.7)); 
+    box-shadow: 3px 3px 5px rgba(0,0,0,40%);    
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'DM Sans', Helvetica, sans-serif;
+    margin-bottom: 7rem;
 }
 
-.main > .logo-carousel > h3{
-    height: auto;
-    max-width: 450px;
-    margin: auto;
-    background-color: #4a5e3d;
-    background: linear-gradient(to right, #384636, #536a43);
-    overflow-x: hidden;
-    padding: 10px;
-    font-family: "DM Sans", sans-serif;
-    border: 4px ridge black;
-    font-size: 1.3em;
-    margin-bottom: 30px;
-    transition: transform 0.3s ease-in-out; 
+.message > h3 {
+  font-size: 2.2rem;
+  font-family: "DM Sans", sans-serif;
 }
 
-.main > .message > p{
-    height: auto;
-    max-width: 540px;
-    margin: auto;
-    background-color: #4a5e3d;
-    background: linear-gradient(to right, #384636, #536a43);
-    overflow-x: hidden;
+.logo-carousel > h3{
+    margin-bottom: 5rem;
+    background-color: #306362;
+    background: linear-gradient(to right, rgba(53, 112, 111, 0.7), rgba(54, 132, 130, 0.7)); 
+    box-shadow: 3px 3px 5px rgba(0,0,0,40%);    
+    border-radius: 10px;
     padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'DM Sans', Helvetica, sans-serif;
+    font-size: 1.9rem;
+    max-width: 20rem;
+    margin:auto;
+}
+
+.message > p{
+    font-size: 1.3rem;
     font-family: "DM Sans", sans-serif;
-    border: 4px ridge black;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
 .carousel-container {
-  overflow: hidden; 
+  overflow: hidden;
   width: 100%;
+  margin-top: 4rem;
+  padding: 20px 0;
+  margin-bottom: 5rem;
 }
 
 .slide-track {
   display: flex;
-  width: fit-content; 
-  animation: scroll 128s linear infinite; /* Adjust duration (20s) for desired speed */
+  gap: 40px; 
+  width: max-content;
+  animation: scroll 40s linear infinite;
 }
 
 .slide {
-  width:300px;
-  margin: 0 10px;
-  outline-offset: 0;
-  flex-shrink: 0; 
+  flex: 0 0 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.slide:hover img {
+  transform: scale(1.1);
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0); /* Start position */
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translateX(-3000px); /* End position: move left by the width of the original slides */
+  to {
+    transform: translateX(-50%);
   }
 }
 
-.footer{
-  background-color: #4a5e3d;
-    background: linear-gradient(to right, #384636, #536a43);
-    overflow-x: hidden;
-    padding: 7px;
-    font-family: "DM Sans", sans-serif;
-    border: 4px ridge black;
-    margin-top: 50px;
+.wrapper {
+  min-height: 100%;
+  position: relative;
 }
 
-.main > .footer > a{
-  font-size: 10px;
-  color: black;
-  font-weight:450;
-}
-
-.footer a:hover{
-    transform: scale(1.1) translateX(5px);
-    transition: transform 0.1s ease-in-out;
-    color: #f1f1f1;
+.footer {
+  position: static;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -3px 5px rgba(0,0,0,0.6);
+  background-color: #306362;
+  background: linear-gradient(to right, rgba(53, 112, 111, 0.7), rgba(54, 132, 130, 0.7));
+  padding: 15px;
+  font-family: 'DM Sans', Helvetica, sans-serif;
+  font-size: 80%;
 }
