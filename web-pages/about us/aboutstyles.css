@@ -1,7 +1,11 @@
 /*DM Sans*/
+/*DM Sans*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 /*Josefin Sans*/
+/*Josefin Sans*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+/*Anton*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 /*Anton*/
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
@@ -81,6 +85,8 @@ body {
     font-family: 'Josefin Sans', Helvetica, sans-serif;
 }
 
+.main .header h2{
+    font-size: 2.5rem;
 .main .header h2{
     font-size: 2.5rem;
     text-align: center;
