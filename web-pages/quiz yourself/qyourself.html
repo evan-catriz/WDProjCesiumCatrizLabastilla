@@ -1,27 +1,187 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title>Next Steps</title>
+            <title>Quiz Yourself</title>
             <link rel="icon" type="image/x-icon" href="../../assets/fav-icon.png">
-            <link rel="stylesheet" href="nextstyles.css" type="text/css">
+            <link rel="stylesheet" href="qyourself.css" type="text/css">
         </head>
         <body>
-            <div class="s-nav">
-            <p>.</p>
-            <a id="home" href="../../index.html">Home<br><br></a>
-            <a href="../animal directory/pcroc.html"><br>Animal Directory<br><br></a>
-            <a href="../interactive map/interactivemap.html"><br>Animal Habitats<br><br></a>
-            <a href="../digital museum/digitalmuseum.html"><br>Digital Museum<br><br></a>
-            <a href="../next steps/nextsteps.html"><br>Next Steps<br><br></a>
-            <a href="../about us/aboutus.html"><br>About Us</a>
+        <div class="s-nav">
+            <h2 id="tbar">Nature On the Edge</h2>
+            <a id="home" href="../../index.html">Home</a>
+            <a href="../animal directory/pcroc.html">Animal Directory</a>
+            <a href="../digital museum/digitalmuseum.html">Digital Museum</a>
+            <a href="../next steps/nextsteps.html">Next Steps</a>
+            <a href="../about us/aboutus.html">About Us</a>
+            <a href="../quiz yourself/qyourself.html">Quiz Yourself</a>
         </div>
+
         <div class="main">
-            <a id ="arrow-l" href="../interactive map/interactivemap.html">&#8656;</a>
-            <a id ="arrow-r" href="../about us/aboutus.html">&#8658;</a>
             <div class="header">
                 <h1>Nature on the Edge</h1>
-                <h2>Next Steps</h2>
+                <h2>Quiz Yourself!</h2>
+            </div>
+
+            <div class="conta1">
+                <h3>How this quiz works:</h3>
+                <p>This quiz offers 10 questions that help you test your knowledge about what you have learned about the endangered animals around the Philippines featured in this website. Don't worry, this wont be graded and will definitely not affect your future (I think), but give it your best shot! 
+                </p>
+            </div>
+
+           <form id="quizForm">
+
+                <div class="quiz-container">
+
+                    <!-- PROGRESS INDICATOR -->
+                    <div class="progress" id="progressText">1 / 11</div>
+
+                    <!-- LEFT ARROW -->
+                    <button type="button" class="nav-btn prev-btn" onclick="changeQuestion(-1)">❮</button>
+
+                    <!-- QUESTIONS START -->
+
+                    <!-- Q1 -->
+                    <div class="question active">
+                    <h2>About how many Philippine Eagles are left in the wild?</h2>
+                    <label><input type="radio" name="q1" value="~400"> ~400</label>
+                    <label><input type="radio" name="q1" value="~300"> ~300</label>
+                    <label><input type="radio" name="q1" value="~600"> ~600</label>
+                    <label><input type="radio" name="q1" value="~800"> ~800</label>
+                    <div class="feedback"></div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="question">
+                    <h2>Which of the following is one of the major threats toward the Philippine forest turtle?</h2>
+                    <label><input type="radio" name="q2" value="Illegal wildlife trade"> Illegal wildlife trade</label>
+                    <label><input type="radio" name="q2" value="Deep-sea mining"> Deep-sea mining</label>
+                    <label><input type="radio" name="q2" value="Destruction of habitat"> Destruction of habitat</label>
+                    <label><input type="radio" name="q2" value="Coral bleaching"> Coral bleaching</label>
+                    <div class="feedback"></div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="question">
+                    <h2>Which organization focuses on protecting the Philippine crocodile and its habitat?</h2>
+                    <label><input type="radio" name="q3" value="Talarak Foundation"> Talarak Foundation</label>
+                    <label><input type="radio" name="q3" value="Mabuwaya Foundation"> Mabuwaya Foundation</label>
+                    <label><input type="radio" name="q3" value="WWF Philippines"> WWF Philippines</label>
+                    <label><input type="radio" name="q3" value="Wildlife Conservation Society"> Wildlife Conservation Society</label>
+                    <div class="feedback"></div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="question">
+                    <h2>What is the average lifespan of the Philippine Tarsier in captivity?</h2>
+                    <label><input type="radio" name="q4" value="13-20 years"> 13-20 years</label>
+                    <label><input type="radio" name="q4" value="18-20 years"> 18-20 years</label>
+                    <label><input type="radio" name="q4" value="10-12 years"> 10-12 years</label>
+                    <label><input type="radio" name="q4" value="25-30 years"> 25-30 years</label>
+                    <div class="feedback"></div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="question">
+                    <h2>What is the average lifespan of the Bombon Sardine (Tawilis)?</h2>
+                    <label><input type="radio" name="q5" value="1-3 years"> 1-3 years</label>
+                    <label><input type="radio" name="q5" value="6-7 years"> 6-7 years</label>
+                    <label><input type="radio" name="q5" value="3-5 years"> 3-5 years</label>
+                    <label><input type="radio" name="q5" value="7-9 years"> 7-9 years</label>
+                    <div class="feedback"></div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="question">
+                    <h2>What does the diet of the tarsier consist of?</h2>
+                    <label><input type="radio" name="q6" value="Grass"> Grass</label>
+                    <label><input type="radio" name="q6" value="Live insects"> Live insects</label>
+                    <label><input type="radio" name="q6" value="Fruit seeds"> Fruit seeds</label>
+                    <label><input type="radio" name="q6" value="Live fish"> Live fish</label>
+                    <div class="feedback"></div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="question">
+                    <h2>What is the average lifespan of a Tawilis?</h2>
+                    <label><input type="radio" name="q7" value="1-2 years"> 1-2 years</label>
+                    <label><input type="radio" name="q7" value="10 months"> 10 months</label>
+                    <label><input type="radio" name="q7" value="3-5 years"> 3-5 years</label>
+                    <label><input type="radio" name="q7" value="8-10 years"> 8-10 years</label>
+                    <div class="feedback"></div>
+                    </div>
+
+                    <!-- Q8 -->
+                    <div class="question">
+                    <h2>What environmental organization is focused on conserving the critically endangered Philippine Cockatoo?</h2>
+                    <label><input type="radio" name="q8" value="Katala Foundation"> Katala Foundation</label>
+                    <label><input type="radio" name="q8" value="Defenders of Wildlife"> Defenders of Wildlife</label>
+                    <label><input type="radio" name="q8" value="Rainforest Alliance"> Rainforest Alliance</label>
+                    <label><input type="radio" name="q8" value="Talarak Foundation"> Talarak Foundation</label>
+                    <div class="feedback"></div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="question">
+                    <h2>Where is the sole location where Philippine Forest Turtles can be found?</h2>
+                    <label><input type="radio" name="q9" value="Cavite"> Cavite</label>
+                    <label><input type="radio" name="q9" value="Leyte"> Leyte</label>
+                    <label><input type="radio" name="q9" value="Davao"> Davao</label>
+                    <label><input type="radio" name="q9" value="Palawan"> Palawan</label>
+                    <div class="feedback"></div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="question">
+                    <h2>What is the mark on the head of the Philippine forest turtle known as?</h2>
+                    <label><input type="radio" name="q10" value="Bowtie mark"> Bowtie mark</label>
+                    <label><input type="radio" name="q10" value="Leaf mark"> Leaf mark</label>
+                    <label><input type="radio" name="q10" value="Forest mark"> Forest mark</label>
+                    <label><input type="radio" name="q10" value="Tree mark"> Tree mark</label>
+                    <div class="feedback"></div>
+                    </div>
+
+                    <!-- Q11 -->
+                    <div class="question">
+                    <h2>What is the extinction risk of the Tamaraw?</h2>
+                    <label><input type="radio" name="q11" value="Critically Endangered (CR)"> Critically Endangered (CR)</label>
+                    <label><input type="radio" name="q11" value="Endangered (EN)"> Endangered (EN)</label>
+                    <label><input type="radio" name="q11" value="Near Threatened (NT)"> Near Threatened (NT)</label>
+                    <label><input type="radio" name="q11" value="Vulnerable (VU)"> Vulnerable (VU)</label>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <div class="feedback"></div>
+                    </div>
+
+                    <!-- QUESTIONS END -->
+
+                    <!-- RIGHT ARROW -->
+                    <button type="button" class="nav-btn next-btn" onclick="changeQuestion(1)">❯</button>
+
+                </div>
+
+            </form>
+
+            <div class="footer">
+                <p>References:</p>
+                <p><i>FAO Fisheries & Aquaculture.</i> (n.d.). <a href="https://www.fao.org/fishery/en/openasfa/6696183d-1fe1-4c93-8b2a-6f577471f382">https://www.fao.org/fishery/en/openasfa/6696183d-1fe1-4c93-8b2a-6f577471f382</a><br>
+
+<i>Crocodylus mindorensis (Philippine crocodile)</i> | INFORMATION | Animal Diversity Web. (n.d.-b). <a href="https://animaldiversity.org/accounts/Crocodylus_mindorensis/">https://animaldiversity.org/accounts/Crocodylus_mindorensis/</a><br>
+
+<i>Philippine eagle - EDGE of Existence.</i> (2019, October 25). EDGE of Existence. <a href="https://www.edgeofexistence.org/species/philippine-eagle/">https://www.edgeofexistence.org/species/philippine-eagle/</a><br>
+
+<i>Tamaraw.</i> (n.d.). <a href="https://www.asianwildcattle.org/tamaraw.html">https://www.asianwildcattle.org/tamaraw.html</a><br>
+
+<i>Philippine spotted deer</i> - Newquay Zoo. (n.d.). Newquay Zoo. <a href="https://www.newquayzoo.org.uk/animals-az/deer-philippine-spotted/">https://www.newquayzoo.org.uk/animals-az/deer-philippine-spotted/</a><br>
+
++OK. (2025, June 22). <i>Philippine Tarsier, Carlito syrichta</i> | New England Primate Conservancy. New England Primate Conservancy - Committed to Leaving a Legacy of Hope and Tools to Build a Better Tomorrow for All the Earth’s Citizens. <a href="https://neprimateconservancy.org/philippine-tarsier/">https://neprimateconservancy.org/philippine-tarsier/</a><br>
+
+<i>Endangered Species International.</i> (n.d.). <a href="https://www.endangeredspeciesinternational.org/project_forestturtle.html">https://www.endangeredspeciesinternational.org/project_forestturtle.html</a>
+
+<i>Indonesia is Home to Four of the World’s Most Endangered Animals.</i> (n.d.-b). Voronoi. <a href="https://posts.voronoiapp.com/nature/-Indonesia-is-Home-to-Four-of-the-Worlds-Most-Endangered-Animals-1593">https://posts.voronoiapp.com/nature/-Indonesia-is-Home-to-Four-of-the-Worlds-Most-Endangered-Animals-1593</a><br>
+
+International Fund for Animal Welfare. (2025, April 24). <i>15 animals that recovered from being endangered</i>. IFAW. <a href="https://www.ifaw.org/journal/animals-recovered-being-endangered">https://www.ifaw.org/journal/animals-recovered-being-endangered</a><br></p>
             </div>
             
-        </div>
-    </html>
+            </div>
+            <script src="qyourself.js"></script>
+        </body>
