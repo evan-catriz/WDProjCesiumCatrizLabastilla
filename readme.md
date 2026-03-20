@@ -99,7 +99,7 @@ This webpage will only unlock once the user has filled out the quiz at least onc
 ![reward](./readme%20assets/extrainfo.png)
 
 ### Reported Animal Sightings
-![sightings](./readme%20assets/CRUD Wireframe 1.png)
+![alt text](<readme assets/CRUD Wireframe 1.png>)
 
 ### Leaderboard
-![leaderboard](./readme%20assets/CRUD Wireframe 2.png)
+![alt text](<readme assets/CRUD Wireframe 2.png>)
