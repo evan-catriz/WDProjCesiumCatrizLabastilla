@@ -39,7 +39,7 @@ The digital museum page contains a visual representation (via photos) of each en
 
 ## Design and Narrative on HTML Form
 
-HTML form to be used on the website: Quiz game. The webpage will allow the user to test their knowledge regarding the contents of the website by having them take an online quiz regarding all that was mentioned in the previous webpages. It will first ask for the user’s name in order to keep track of the leaderboard, then 10 questions regarding endangered animals will be asked of the user. A different set of questions will be asked every time the webpage is reloaded. <br><br>
+HTML form to be used on the website: Quiz game and Wildlife Sighting Log. <br> 1. The webpage will allow the user to test their knowledge regarding the contents of the website by having them take an online quiz regarding all that was mentioned in the previous webpages. It will first ask for the user’s name in order to keep track of the leaderboard, then 10 questions regarding endangered animals will be asked of the user. A different set of questions will be asked every time the webpage is reloaded. <br> 2. Users will be allowed to record possible sightings of the animals in the directory, asking for the species, location, time seen, description, and an optional image upload.  <br><br>
 
 Users will then be redirected to a “Thank you” page showing their score and their place on the leaderboard compared to other people who played the game. This will be accompanied by a fun fact about endangered animals that will change every time the quiz will be taken. This is to allow people to participate more actively in the goals of environmental campaigns by creating a fun and interactive way for people to gain knowledge and spread awareness. <br><br>
 
@@ -53,6 +53,15 @@ This will display the user’s score in the quiz, their place on the leaderboard
 
 ### Extra Privileges
 This webpage will only unlock once the user has filled out the quiz at least once, and it contains extra information regarding endangered animals, such as a timeline of environmental conservation efforts around the world, multiple links to animated charts that the user can search up at any time, and a detailed explanation of the environmental awareness organizations. 
+
+## Final Modification Proposal
+1. CREATE (add a score to localStorage) - after a user finishes the quiz, a new score is automatically created in the object. A new object is also created when a user logs a sighting <br><br>
+
+2. READ (View past scores) - when the user presses the "View My Scores" button, they'll be redirected to a list displaying their past scores and dates of submission, ranked lowest to highest. By clicking on a certain attempt, that attempt will be opened and the quiz, along with the right and wrong answers, will be shown. When the user presses "View leaderboard", they'll be redirected to a list displaying the scores and dates of submission of every user who took the quiz, also ranked lowest to highest. This allows them to track their learning progress over time by letting them view past attempts. They can also track their progress against others'. Users can also view information about others' species sightings and comment on them.
+
+3. UPDATE (Edit account info or retake quizzes) - users can edit their credentials or choose to retake a quiz to improve their score. Their new score will be updated in the leaderboard. Users can edit their animal sighting logs by correcting or updating details
+
+4. DELETE (reset history) - users can choose to delete incorrect or uncertain scores or clear their whole history to start fresh. They can also delete submitted sighting logs.
 
 
 ## Wireframes
@@ -88,3 +97,9 @@ This webpage will only unlock once the user has filled out the quiz at least onc
 
 ### Extra Privileges!
 ![reward](./readme%20assets/extrainfo.png)
+
+### Reported Animal Sightings
+![alt text](<readme assets/CRUD Wireframe 1.png>)
+
+### Leaderboard
+![alt text](<readme assets/CRUD Wireframe 2.png>)

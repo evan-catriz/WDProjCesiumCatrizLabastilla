@@ -53,6 +53,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateQuestions();
 
+  document.getElementById("nameForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    let name = document.getElementById("name1").value;
+
+    let nOutput = "";
+
+    nOutput +=
+      "Welcome " + name + "! Good luck and have fun!";
+    document.getElementById("greet").innerHTML = nOutput;
+    console.log(nOutput);
+  })
+
   document.getElementById("quizForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -60,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    let score = 0;
+    var score = 0;
     let firstAnsweredIndex = null;
 
     for (let key in answers) {
@@ -91,6 +103,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     alert(`You scored ${score} out of ${questions.length}`);
 
+    //SCORES FUNCTION
+
+    const formData = {
+       objQScore: score
+      };
+      
+      //get quiz scores input array
+      let qScores = JSON.parse(localStorage.getItem("formData"));
+
+      //if empty, make array
+      if(!qScores){
+        qScores = [];
+      }
+
+      //if object is not array, put object in array
+      if(!Array.isArray(qScores)){
+        qScores = [qScores];
+      }
+
+        // add scores
+        qScores.push(formData);
+
+
+      localStorage.setItem("formData", JSON.stringify(qScores));
+
+      //display after
+      displayScores();
+
     // Auto-slide to first answered question
     if (firstAnsweredIndex !== null) {
       currentIndex = firstAnsweredIndex;
@@ -99,3 +139,42 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+//other scores funcs
+
+    //delete movie function
+      function deleteScores(index){
+        if(confirm("Are you sure you want to delete this score?")){
+          let qScores = JSON.parse(localStorage.getItem("formData")) || [];
+          
+          qScores.splice(index, 1); //remove selected movie
+
+          //no need for removeItem as setItem overrides it anyway
+          localStorage.setItem("formData", JSON.stringify(qScores));
+
+          displayScores();
+        }
+      }
+
+    //display list function
+      function displayScores(){
+        
+        //get array from localStorage
+        let qScores = JSON.parse(localStorage.getItem("formData")) || [];
+        let output = "";
+
+        //for each index in array (used array as objects have each index in the array which can be used to splice):
+        for(let i = 0; i < qScores.length; i++){
+          
+          //i = array index, movie
+          output +=
+            "Attempt " + (i+1) + ": " +
+            qScores[i].objQScore + "/11" + "<br>" +
+            ' <button onclick="deleteScores(' + i + ')">Delete</button><br>';
+            
+        }
+
+        document.getElementById("sList").innerHTML = output;
+      }
+
+      displayScores();
