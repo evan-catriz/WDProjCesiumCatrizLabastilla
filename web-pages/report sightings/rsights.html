@@ -43,7 +43,7 @@
                 <form id="sightForm">
 
                     <div class="sSpeCont">
-                    <label><b>Species:</b><br>
+                    <label>Species:<br>
                         <select name="sSpecies" id ="sSpecies" required>
                         <option value="">Select Species</option>
                         <option value="Bombon Sardine (Tawilis)">Bombon Sardine (Tawilis)</option>
@@ -54,31 +54,31 @@
                         <option value="Tamaraw">Tamaraw</option>
                         <option value="Tarsier">Tarsier</option>
                         </select>
-                    </label><br>
+                    </label><br><br>
                     </div>
 
                     <div class="sLocCont">
-                    <label><b>Location:</b><br>
+                    <label>Location:<br>
                         <input type="text" name="sLocation" id="sLocation" placeholder="Insert Location" required/>
-                    </label><br>
+                    </label><br><br>
                     </div>
 
                     <div class="sDateCont">
-                    <label><b>Date Found:</b><br>
+                    <label>Date Found:<br>
                         <input type="date" name="sDate" id="sDate" required/>
-                    </label><br>
+                    </label><br><br>
                     </div>
                     
                     <div class="sDesCont">
-                    <b>Additional Notes:</b>
+                    Additional Notes:
                         <div class="sDescArea">
                         <textarea placeholder="Description" id="dArea"></textarea>
                         </div>
-                    </div>
+                    </div><br><br>
                     
                     <div class="sImgCont">
-                    <b>Image (Optional):</b>
-                        <input type="file" name="sImg" id="sImg"/>
+                    Image (Optional):<br>
+                        <input type="file" id="sImg" accept="image/*">
                     </div>
 
                     <br><br>
@@ -92,8 +92,10 @@
 
             <div class="sReports">
                 <h2>Your reports!</h2>
-                <p id="rList"></p>
             </div>
+
+            <!-- list of reports -->
+            <div id="rList"></div>
 
             <div class="footer">
                 <p>References:</p>

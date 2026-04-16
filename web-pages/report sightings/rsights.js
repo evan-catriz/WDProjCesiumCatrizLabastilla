@@ -7,43 +7,62 @@ document.addEventListener("DOMContentLoaded", function () {
     let nOutput = "";
 
     nOutput +=
-      "Welcome " + name + "! How much have you seen?";
+      "Welcome, " + name + "! How much have you seen?";
     document.getElementById("greet2").innerHTML = nOutput;
     console.log(nOutput);
   })
 
   //REPORT FORM
   document.getElementById("sightForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+  e.preventDefault();
+
+    const fileInput = document.getElementById("sImg");
+    const file = fileInput.files[0];
+
+    //for reading of images
+    const reader = new FileReader();
+
+    reader.onload = function(event) {
 
       const formData = {
         species: document.getElementById("sSpecies").value,
         location: document.getElementById("sLocation").value,
-        date: document.geElementById("sDate").value,
+        date: document.getElementById("sDate").value,
         desc: document.getElementById("dArea").value,
-        image: document.getElementById("sImg").value
+        image: event.target.result, // image load (base 64)
       };
-      
-      //get sight input array
-      let sights = JSON.parse(localStorage.getItem("sightData"));
 
-      //if empty, make array
-      if(!sights){
-        sights = [];
-      }
+      //makes array on declaration of variable sighsts
+      let sights = JSON.parse(localStorage.getItem("sightData")) || [];
 
-      //if object is not array, put object in array
+      //if not array, turns into array
       if(!Array.isArray(sights)){
         sights = [sights];
       }
 
-        sights.push(formData);
+      sights.push(formData);
 
       localStorage.setItem("sightData", JSON.stringify(sights));
 
-      //display after
       displaySights();
-    });
+      document.getElementById("sightForm").reset();
+    };
+
+    // if user selected image
+    if(file){
+      reader.readAsDataURL(file);
+    } else {
+      // if no image, still save
+      reader.onload({ target: { result: "" } });
+    }
+
+    //alerts if file is greater than 2MB.
+    if(file && file.size > 2 * 1024 * 1024){
+      alert("Image too large! Please upload under 2MB.");
+      return;
+}
+  });
+
 });
 
 //delete report function
@@ -62,25 +81,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //display list function
       function displaySights(){
-        
-        //get array from localStorage
         let sights = JSON.parse(localStorage.getItem("sightData")) || [];
         let output = "";
 
-        //for each index in array (used array as objects have each index in the array which can be used to splice):
         for(let i = 0; i < sights.length; i++){
-          
-          //i = array index, report
 
-          //species, locations, date, desc, image
-          output +=
-            "<b>" + sights[i].species + "</b><br><br>" +
-            sights[i].locations + "<br>" +
-            sights[i].date + "<br><br>" +
-            sights[i].desc + "<br>" +
-            sights[i].image +
-            ' <button onclick="deleteSight(' + i + ')">Delete</button><br>';
-            
+          let dateObj = new Date(sights[i].date);
+          let formattedDate = dateObj.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+          });
+
+          let imageHTML = sights[i].image 
+            ? `<img src="${sights[i].image}" class="report-img"><br><br><br>`
+            : "<br><br><br>";
+
+          output += `
+            <div class="report-card">
+              <h2 class="report-title">${sights[i].species}</h2>
+
+              <p class="report-meta">
+                ${sights[i].location}, ${formattedDate}
+              </p>
+
+              ${imageHTML}
+
+              <p class="report-desc">${sights[i].desc}</p>
+
+              <br><br>
+
+              <button onclick="deleteSight(${i})">Delete</button>
+            </div>
+          `;
         }
 
         document.getElementById("rList").innerHTML = output;

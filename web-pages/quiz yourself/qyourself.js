@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let nOutput = "";
 
     nOutput +=
-      "Welcome " + name + "! Good luck and have fun!";
+      "Welcome, " + name + "! Good luck and have fun!";
     document.getElementById("greet").innerHTML = nOutput;
     console.log(nOutput);
   })
