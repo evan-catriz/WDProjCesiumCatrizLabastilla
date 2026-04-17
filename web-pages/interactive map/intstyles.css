@@ -86,19 +86,19 @@ body {
     text-align: center;
     font-family: 'Josefin Sans', Helvetica, sans-serif;
     margin-bottom: 50px;
-}x
+}
 
 #legend img{
     width: auto;
-    height: 15rem;
+    height: 20rem;
     border-radius: 1.5rem;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
     opacity: 0.8;
+    transition: transform 0.3s ease-in-out;
 }
 
 #legend img:hover{
     transform: scale(1.05) translateX(0.5rem);
-    transition: transform 0.3s ease-in-out;
 }
 
 .content{
@@ -106,6 +106,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
+}
+
+#phmap{
+    display: flex;
+    width: auto;
+    height: 100rem;
 }
 
 .footer {

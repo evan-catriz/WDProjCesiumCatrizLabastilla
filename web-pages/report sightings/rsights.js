@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let nOutput = "";
 
     nOutput +=
-      "Welcome, " + name + "! How much have you seen?";
+      "Welcome, " + name + "! What have you seen?";
     document.getElementById("greet2").innerHTML = nOutput;
     console.log(nOutput);
   })
@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
         location: document.getElementById("sLocation").value,
         date: document.getElementById("sDate").value,
         desc: document.getElementById("dArea").value,
-        image: event.target.result, // image load (base 64)
+        image: event.target.result, // image load
       };
 
-      //makes array on declaration of variable sighsts
+      //makes array on declaration of variable sights
       let sights = JSON.parse(localStorage.getItem("sightData")) || [];
 
       //if not array, turns into array
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
               ${imageHTML}
 
-              <p class="report-desc">${sights[i].desc}</p>
+              <p class="report-desc">Description:<br>${sights[i].desc}</p>
 
               <br><br>
 
