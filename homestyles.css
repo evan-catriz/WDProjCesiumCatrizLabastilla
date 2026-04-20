@@ -22,8 +22,9 @@ body {
 
 .s-nav {
     display: flex;
+    flex-direction: row;   
     justify-content: left;
-    align-items: left;
+    align-items: flex-start;
     background-color: #326d6c;
     position: fixed;
     top: 0;
@@ -31,6 +32,7 @@ body {
     height: 4.5rem;
     box-shadow: 0px 3px 5px rgba(0,0,0,0.6);
     z-index: 10;
+    flex-wrap: nowrap;
 }
 
 .s-nav a {
@@ -41,7 +43,7 @@ body {
     display: flex;
     align-items: center;
     font-family: 'DM Sans', Helvetica, sans-serif;
-    font-size: 95%;
+    font-size: 87%;
 }
 
 .s-nav #home{
@@ -54,6 +56,8 @@ body {
     font-weight: 100;
     letter-spacing: 0.5px;
     margin-left: 1.5rem;
+    font-size: 1.3rem;
+    align-items: center;
 }
 
 .s-nav a:hover {
@@ -62,12 +66,107 @@ body {
 }
 
 @media screen and (max-width: 72rem) {
-  .s-nav #tbar, .snav a {
+  .s-nav #tbar, .s-nav a {
     font-size :90%;
     margin: auto;
     text-align: left;
     margin-left: 15px;
   }
+}
+
+@media screen and (max-width: 600px) {
+    .s-nav {
+        position: fixed;
+        top: 0;
+        left: -200px;
+        height: 100%;
+        width: 150px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        background-color: #326d6c;
+        z-index: 9999;
+
+        transition: left 0.3s ease; 
+        overflow-y: auto;
+    }
+
+    /* when active (opened) */
+    .s-nav.active {
+        left: 0;
+    }
+
+    .s-nav-wrap{
+        margin-top: 39px;
+    }
+
+    .s-nav a {
+        width: 100%;
+        padding: 15px 20px;
+        height: auto;
+        font-size: 0.9rem;
+    }
+
+    .s-nav #tbar {
+        margin: 15px 20px;
+        font-size: 1.2rem;
+    }
+
+    .s-nav #home {
+        margin-left: 0;
+    }
+
+    /* hamburger button */
+    .menu-btn {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 23px;
+        color: white;
+        background-color: #326d6c;
+        padding: 4px 8px;
+        border-radius: 5px;
+        z-index: 10000;
+        cursor: pointer;
+    }
+
+    /* content resets (no permanent sidebar anymore) */
+    .main {
+        padding: 30px;
+    }
+
+    .main .cont1,
+    .main .cont2,
+    .main .cont3,
+    .main .cont4,
+    .main .cont5 {
+        margin: 0 0 30px 0 !important;
+    }
+
+    .header h1{
+        font-size: 3.5rem !important;
+    }
+
+    .header h2{
+        font-size: 1.5rem !important;
+    }
+
+    #waes, #loer, #wbd{
+    font-size: 1.7rem !important;
+    }
+
+    .cont1 p, .cont2 p, .cont3 p, .cont4 p, .cont5 p{
+        font-size: 1.1rem !important;
+    }   
+
+    .cont1, .cont2, .cont3, .cont4, .cont5 {
+        width: 100%;
+        max-width: 100%;
+    }
+    
 }
 
 .main{
@@ -128,7 +227,9 @@ body {
 
 .cont4 img{
     height: auto;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
+
     border-radius: 10px;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
     transition: transform 0.3s ease-in-out;

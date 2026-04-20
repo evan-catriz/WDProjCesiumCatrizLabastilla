@@ -4,19 +4,25 @@
             <title>Nature on the Edge: Home Page</title>
             <link rel="icon" type="image/x-icon" href="assets/fav-icon.png">
             <link rel="stylesheet" href="homestyles.css" type="text/css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">  
         </head>
     <body>
         
         <div class="s-nav">
-            <h2 id="tbar">Nature On the Edge</h2>
-            <a id="home" href="index.html">Home</a>
-            <a href="web-pages/animal directory/pcroc.html">Animal Directory</a>
-            <a href="web-pages/interactive map/interactivemap.html">Animal Habitats</a>
-            <a href="web-pages/digital museum/digitalmuseum.html">Digital Museum</a>
-            <a href="web-pages/next steps/nextsteps.html">Next Steps</a>
-            <a href="web-pages/about us/aboutus.html">About Us</a>
-            <a href="web-pages/quiz yourself/qyourself.html">Quiz Yourself</a>
-            <a href="web-pages/report sightings/rsights.html">Report Sightings</a>
+            <div class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </div>
+            <div class="s-nav-wrap">
+                <h2 id="tbar">Nature On the Edge</h2>
+                <a id="home" href="index.html">Home</a>
+                <a href="web-pages/animal directory/pcroc.html">Animal Directory</a>
+                <a href="web-pages/interactive map/interactivemap.html">Animal Habitats</a>
+                <a href="web-pages/digital museum/digitalmuseum.html">Digital Museum</a>
+                <a href="web-pages/next steps/nextsteps.html">Next Steps</a>
+                <a href="web-pages/about us/aboutus.html">About Us</a>
+                <a href="web-pages/quiz yourself/qyourself.html">Quiz Yourself</a>
+                <a href="web-pages/report sightings/rsights.html">Report Sightings</a>
+            </div>
         </div>
 
         <div class="main">
@@ -82,5 +88,10 @@
             </p>
         </div>
       </div>
+    <script>
+    function toggleMenu() {
+        document.querySelector(".s-nav").classList.toggle("active");
+    }
+    </script>
     </body>
     </html>
