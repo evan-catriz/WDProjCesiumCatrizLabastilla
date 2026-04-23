@@ -4,19 +4,26 @@
             <title>Animal Directory</title>
             <link rel="icon" type="image/x-icon" href="../../assets/fav-icon.png">
             <link rel="stylesheet" href="animstyles.css" type="text/css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
             <div class="s-nav">
-                <h2 id="tbar">Nature On the Edge</h2>
-                <a id="home" href="../../index.html">Home</a>
-                <a href="../animal directory/pcroc.html">Animal Directory</a>
-                <a href="../interactive map/interactivemap.html">Animal Habitats</a>
-                <a href="../digital museum/digitalmuseum.html">Digital Museum</a>
-                <a href="../next steps/nextsteps.html">Next Steps</a>
-                <a href="../about us/aboutus.html">About Us</a>
-                <a href="../quiz yourself/qyourself.html">Quiz Yourself</a>
-                <a href="../report sightings/rsights.html">Report Sightings</a>
+                <div class="menu-btn" onclick="toggleMenu()">
+                    ☰
+                </div>
+                <div class="s-nav-wrap">
+                    <h2 id="tbar">Nature On the Edge</h2>
+                    <a id="home" href="../../index.html">Home</a>
+                    <a href="../animal directory/pcroc.html">Animal Directory</a>
+                    <a href="../interactive map/interactivemap.html">Animal Habitats</a>
+                    <a href="../digital museum/digitalmuseum.html">Digital Museum</a>
+                    <a href="../next steps/nextsteps.html">Next Steps</a>
+                    <a href="../about us/aboutus.html">About Us</a>
+                    <a href="../quiz yourself/qyourself.html">Quiz Yourself</a>
+                    <a href="../report sightings/rsights.html">Report Sightings</a>
+                </div>
             </div>
+
             <div class="main">
                 <div class="header">
                     <h1>Nature on the Edge</h1>
@@ -52,9 +59,15 @@
                         <b>Lifespan:</b> 20-25 years in the wild.<br><br>
                         Fun fact: Once diurnal (day-active), tamaraws became mostly nocturnal (night-active) to evade humans, making them hard to spot.
                     </p>
-                <div class="footer">
-                    <p><b>References:</b></p>
-                    <p><i>Tamaraw.</i> (n.d.). <a href="https://www.asianwildcattle.org/tamaraw.html">https://www.asianwildcattle.org/tamaraw.html</a><br></p>
-                </div>
+            </div>
+            <div class="footer">
+                <p><b>References:</b></p>
+                <p><i>Tamaraw.</i> (n.d.). <a href="https://www.asianwildcattle.org/tamaraw.html">https://www.asianwildcattle.org/tamaraw.html</a><br></p>
             </div>
         </body>
+        <script>
+        function toggleMenu() {
+            document.querySelector(".s-nav-wrap").classList.toggle("active");
+        }
+        </script>
+    </html>

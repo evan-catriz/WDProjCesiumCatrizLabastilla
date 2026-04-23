@@ -20,8 +20,9 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.s-nav {
+.s-nav-wrap {
     display: flex;
+    flex-direction: row;   
     justify-content: left;
     align-items: left;
     background-color: #326d6c;
@@ -30,9 +31,11 @@ body {
     width: 100%;
     height: 4.5rem;
     box-shadow: 0px 3px 5px rgba(0,0,0,0.6);
+    z-index: 10;
+    flex-wrap: nowrap;
 }
 
-.s-nav a {
+.s-nav-wrap a {
     color: white;
     padding: 0 20px;
     text-decoration: none;
@@ -43,11 +46,11 @@ body {
     font-size: 87%;
 }
 
-.s-nav #home{
+.s-nav-wrap #home{
     margin-left: 30px;
 }
 
-.s-nav #tbar{
+.s-nav-wrap #tbar{
     font-family: 'Anton', Helvetica, sans-serif;
     color: white;
     font-weight: 100;
@@ -57,13 +60,17 @@ body {
     align-items: center;
 }
 
-.s-nav a:hover {
+.s-nav-wrap a:hover {
     background-color: #4CAF50;
     color: black;
 }
 
+.menu-btn {
+    display: none;
+}
+
 @media screen and (max-width: 72rem) {
-  .s-nav #tbar, .snav a {
+  .s-nav-wrap #tbar, .s-nav a {
     font-size :90%;
     margin: auto;
     text-align: left;
@@ -71,8 +78,126 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) {
+    .s-nav-wrap {
+        position: fixed;
+        top: 0;
+        left: -200px;
+        height: 100%;
+        width: 150px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        background-color: #326d6c;
+        z-index: 9999;
+
+        transition: left 0.3s ease;
+        overflow-y: auto;
+
+        padding-top: 10px;
+        gap: 6px;
+        margin-top: 0; /* IMPORTANT */
+    }
+
+    .s-nav-wrap.active{
+        left: 0;
+    }
+
+    .s-nav-wrap a {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 12px 16px;
+        margin: 0;
+    }
+
+    .s-nav-wrap #home{
+        margin-left: 0px;
+    }
+
+    .s-nav-wrap #tbar {
+        margin: 10px 16px 20px 50px;
+    }
+
+    /* hamburger button */
+    .menu-btn {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 23px;
+        color: white;
+        background-color: #326d6c;
+        padding: 4px 8px;
+        border-radius: 5px;
+        z-index: 10000;
+        cursor: pointer;
+    }
+
+    /* content resets (no permanent sidebar anymore) */
+    .main {
+        padding: 30px;
+    }
+
+    .header h1{
+        font-size: 3.5rem !important;
+    }
+
+    .header h2{
+        font-size: 1.5rem !important;
+        margin-bottom: 10rem !important;
+    }
+
+    .main > .orgs {
+      display: block !important;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main > .orgs > .fst5,
+    .main > .orgs > .snd5 {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .main > .orgs > .fst5 > p,
+    .main > .orgs > .snd5 > p {
+      margin: auto;
+      margin-bottom: 5rem !important;
+      font-size: 1.5rem;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .main > .message {
+      margin: auto;
+      margin-bottom: 3rem;
+      margin-top: 3rem;
+      max-width: 100%;
+      width: 96%;
+    }
+
+    .main > .message > h3 {
+      font-size: 2rem;
+    }
+
+    .main > .message > p {
+      font-size: 1.5rem;
+    }
+
+    .main > .footer {
+      padding: 12px;
+      font-size: 1.6rem;
+    }
+
+}
+
 .main{
     margin-top: 4.5rem;
+    padding: 0 20px;
 }
 
 .main .header h1{
@@ -229,18 +354,22 @@ body {
 }
 
 .wrapper {
-  min-height: 100%;
-  position: relative;
+    min-height: 100%;
+    position: relative;
 }
 
 .footer {
-  position: static;
-  bottom: 0;
-  width: 100%;
-  box-shadow: 0px -3px 5px rgba(0,0,0,0.6);
-  background-color: #306362;
-  background: linear-gradient(to right, rgba(53, 112, 111, 0.7), rgba(54, 132, 130, 0.7));
-  padding: 15px;
-  font-family: 'DM Sans', Helvetica, sans-serif;
-  font-size: 80%;
+    position: static;
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+    box-shadow: 0px -3px 5px rgba(0,0,0,0.6);
+    background-color: #306362;
+    background: linear-gradient(to right, rgba(53, 112, 111, 0.7), rgba(54, 132, 130, 0.7));
+    padding: 15px;
+    font-family: 'DM Sans', Helvetica, sans-serif;
+    font-size: 80%;
+    max-height: 7rem;
+    overflow-y: auto;
+    overflow-x: hidden;
 }

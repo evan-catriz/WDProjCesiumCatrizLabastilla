@@ -4,19 +4,26 @@
             <title>Animal Directory</title>
             <link rel="icon" type="image/x-icon" href="../../assets/fav-icon.png">
             <link rel="stylesheet" href="animstyles.css" type="text/css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
             <div class="s-nav">
-                <h2 id="tbar">Nature On the Edge</h2>
-                <a id="home" href="../../index.html">Home</a>
-                <a href="../animal directory/pcroc.html">Animal Directory</a>
-                <a href="../interactive map/interactivemap.html">Animal Habitats</a>
-                <a href="../digital museum/digitalmuseum.html">Digital Museum</a>
-                <a href="../next steps/nextsteps.html">Next Steps</a>
-                <a href="../about us/aboutus.html">About Us</a>
-                <a href="../quiz yourself/qyourself.html">Quiz Yourself</a>
-                <a href="../report sightings/rsights.html">Report Sightings</a>
+                <div class="menu-btn" onclick="toggleMenu()">
+                    ☰
+                </div>
+                <div class="s-nav-wrap">
+                    <h2 id="tbar">Nature On the Edge</h2>
+                    <a id="home" href="../../index.html">Home</a>
+                    <a href="../animal directory/pcroc.html">Animal Directory</a>
+                    <a href="../interactive map/interactivemap.html">Animal Habitats</a>
+                    <a href="../digital museum/digitalmuseum.html">Digital Museum</a>
+                    <a href="../next steps/nextsteps.html">Next Steps</a>
+                    <a href="../about us/aboutus.html">About Us</a>
+                    <a href="../quiz yourself/qyourself.html">Quiz Yourself</a>
+                    <a href="../report sightings/rsights.html">Report Sightings</a>
+                </div>
             </div>
+
             <div class="main">
                 <div class="header">
                     <h1>Nature on the Edge</h1>
@@ -52,9 +59,14 @@
                         Fun fact: Tawilis (scientific name Sardinella tawilis) adapted from saltwater to freshwater after Taal Lake was cut off from the sea, making it a biological marvel.
                     </p>
             </div>
-                <div class="footer">
-                    <p><b>References:</b></p>
-                    <p><i>FAO Fisheries & Aquaculture.</i> (n.d.). <a href="https://www.fao.org/fishery/en/openasfa/6696183d-1fe1-4c93-8b2a-6f577471f382">https://www.fao.org/fishery/en/openasfa/6696183d-1fe1-4c93-8b2a-6f577471f382</a></p>
-                </div>
+            <div class="footer">
+                <p><b>References:</b></p>
+                <p><i>FAO Fisheries & Aquaculture.</i> (n.d.). <a href="https://www.fao.org/fishery/en/openasfa/6696183d-1fe1-4c93-8b2a-6f577471f382">https://www.fao.org/fishery/en/openasfa/6696183d-1fe1-4c93-8b2a-6f577471f382</a></p>
             </div>
         </body>
+        <script>
+        function toggleMenu() {
+            document.querySelector(".s-nav-wrap").classList.toggle("active");
+        }
+        </script>
+    </html>

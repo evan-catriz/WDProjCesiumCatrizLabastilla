@@ -1,3 +1,7 @@
+function toggleMenu() {
+            document.querySelector(".s-nav-wrap").classList.toggle("active");
+        }
+
 document.addEventListener("DOMContentLoaded", function () {
 
   let currentIndex = 0;

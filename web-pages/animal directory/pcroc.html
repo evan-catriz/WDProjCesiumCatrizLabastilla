@@ -4,19 +4,26 @@
             <title>Animal Directory</title>
             <link rel="icon" type="image/x-icon" href="../../assets/fav-icon.png">
             <link rel="stylesheet" href="animstyles.css" type="text/css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
             <div class="s-nav">
-                <h2 id="tbar">Nature On the Edge</h2>
-                <a id="home" href="../../index.html">Home</a>
-                <a href="../animal directory/pcroc.html">Animal Directory</a>
-                <a href="../interactive map/interactivemap.html">Animal Habitats</a>
-                <a href="../digital museum/digitalmuseum.html">Digital Museum</a>
-                <a href="../next steps/nextsteps.html">Next Steps</a>
-                <a href="../about us/aboutus.html">About Us</a>
-                <a href="../quiz yourself/qyourself.html">Quiz Yourself</a>
-                <a href="../report sightings/rsights.html">Report Sightings</a>
+                <div class="menu-btn" onclick="toggleMenu()">
+                    ☰
+                </div>
+                <div class="s-nav-wrap">
+                    <h2 id="tbar">Nature On the Edge</h2>
+                    <a id="home" href="../../index.html">Home</a>
+                    <a href="../animal directory/pcroc.html">Animal Directory</a>
+                    <a href="../interactive map/interactivemap.html">Animal Habitats</a>
+                    <a href="../digital museum/digitalmuseum.html">Digital Museum</a>
+                    <a href="../next steps/nextsteps.html">Next Steps</a>
+                    <a href="../about us/aboutus.html">About Us</a>
+                    <a href="../quiz yourself/qyourself.html">Quiz Yourself</a>
+                    <a href="../report sightings/rsights.html">Report Sightings</a>
+                </div>
             </div>
+
             <div class="main">
                 <div class="header">
                     <h1>Nature on the Edge</h1>
@@ -53,9 +60,15 @@
                         <b>Lifespan:</b> May live as long as 80 years in the wild.<br><br>
                         Fun fact: They swallow stones (gastroliths) to adjust their weight, helping them sink or float in the water.
                     </p>
-                <div class="footer">
-                    <p><b>References:</b></p>
-                    <p><i>Crocodylus mindorensis (Philippine crocodile)</i> | INFORMATION | Animal Diversity Web. (n.d.-b). <a href="https://animaldiversity.org/accounts/Crocodylus_mindorensis/">https://animaldiversity.org/accounts/Crocodylus_mindorensis/</a><br></p>
-                </div>
+            </div>
+            <div class="footer">
+                <p><b>References:</b></p>
+                <p><i>Crocodylus mindorensis (Philippine crocodile)</i> | INFORMATION | Animal Diversity Web. (n.d.-b). <a href="https://animaldiversity.org/accounts/Crocodylus_mindorensis/">https://animaldiversity.org/accounts/Crocodylus_mindorensis/</a><br></p>
             </div>
         </body>
+        <script>
+        function toggleMenu() {
+            document.querySelector(".s-nav-wrap").classList.toggle("active");
+        }
+        </script>
+    </html>

@@ -1,3 +1,7 @@
+function toggleMenu() {
+            document.querySelector(".s-nav-wrap").classList.toggle("active");
+        }
+
 document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("nameForm").addEventListener("submit", function(e) {

@@ -1,3 +1,8 @@
+function toggleMenu() {
+            document.querySelector(".s-nav-wrap").classList.toggle("active");
+        }
+
+
 let slideIndex = 0;
 const slides = document.querySelectorAll(".mySlides");
 const dots = document.querySelectorAll(".dot");
